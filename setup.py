@@ -5,13 +5,13 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name='copspy',
-    version='0.1.1',
+    name='u-copsapi',
+    version='0.0.1',
+    long_description="# fan made python API wrapper for the c-ops public api.\n\n## Description:\nA unofficial Python API wrapper for the public c-ops API, made by the community for the community.\n\n## How to import:\n```python from copspy import get_profile```\n\n## How to use:\n```python\n#Get user profile by ign:\nget_profile.get_user_by_ign(usernamehere)```",
+    long_description_content_type= "text/markdown",
     description='a fan made python API wrapper for the c-ops public api',
-    long_description=long_description,
-    long_description_content_type='text/markdown',
     license='MIT',
-    packages=['copspy/', 'copspy/errors', 'copspy/urls'],
+    packages=['copspy/'],
     author='Kitsune',
     author_email='kitsune@yokaigroup.gg',
     keywords=['cops', 'api', 'wrapper','apiwrapper', 'python', 'c-ops'],
