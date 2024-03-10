@@ -1,6 +1,6 @@
 import requests
-import urls.urls as urls
-from errors import apierror
+from copspy import api_urls
+from copspy import apierror
 from requests.exceptions import ConnectionError as cnerr
 from urllib3.exceptions import NameResolutionError
 def get_player_by_ign(ign: str = None):
@@ -9,7 +9,7 @@ def get_player_by_ign(ign: str = None):
         "content-type": "application/json",
     }
     try:
-        response = requests.get(url=urls.username_api_uri.__add__(ign), headers=headers)
+        response = requests.get(url=api_urls.username_api_uri.__add__(ign), headers=headers)
         if response.ok:
             json_response = response.json()
             return json_response
@@ -32,7 +32,7 @@ def get_player_by_id(id: str = None):
         "content-type": "application/json",
     }
     try:
-        response = requests.get(url=urls.id_api_url.__add__(id), headers=headers)
+        response = requests.get(url=api_urls.id_api_url.__add__(id), headers=headers)
         if response.ok:
             json_response = response.json()
             return json_response

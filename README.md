@@ -23,6 +23,17 @@ get_profile.get_player_by_ign("username here")
 get_profile.get_player_by_id("id here")
 
 ```
-
 # Returns:
 When called, the functions will return in json format. Which you can then use for your projects.
+
+# Adiditonal stuff
+You can provide multiple usernames or ids.As long as you separate them with a `,` Such as: 
+
+```python
+get_profile.get_player_by_ign("usernme1, username2")
+
+# or
+get_profile.get_player_by_id("1234, 5678")
+```
+# Developed by:
+[Kitsune](https://github.com/Kitsune-San)
